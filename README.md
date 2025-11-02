@@ -52,9 +52,9 @@ This project was created to demonstrate:
          ▼
 ┌─────────────────┐
 │  Thread Pool    │ ← ExecutorService (50 threads)
-│  ┌───┐ ┌───┐   │
-│  │ T │ │ T │...│
-│  └───┘ └───┘   │
+│  ┌───┐ ┌───┐    │
+│  │ T │ │ T │... │
+│  └───┘ └───┘    │
 └────────┬────────┘
          │
          ▼
@@ -119,7 +119,7 @@ java -cp bin HTTPServer 3000
 The server will start and display:
 ```
 ╔════════════════════════════════════════════╗
-║   Multi-Threaded Web Server Started      ║
+║   Multi-Threaded Web Server Started        ║
 ╚════════════════════════════════════════════╝
 → Port: 8080
 → Thread Pool Size: 50
