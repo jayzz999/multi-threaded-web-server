@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Threaded Web Server</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Multi-Threaded Web Server</h1>
+            <p class="subtitle">Built with Java | Concurrent Request Handling | REST API</p>
+        </header>
+
+        <section class="card">
+            <h2>Server Status</h2>
+            <div id="status-container">
+                <button onclick="checkStatus()">Check Server Status</button>
+                <div id="status-output"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Echo Test (GET)</h2>
+            <div class="input-group">
+                <input type="text" id="echo-input" placeholder="Enter a message" value="Hello World!">
+                <button onclick="testEcho()">Send Echo</button>
+            </div>
+            <div id="echo-output"></div>
+        </section>
+
+        <section class="card">
+            <h2>Echo Test (POST)</h2>
+            <div class="input-group">
+                <input type="text" id="echo-post-input" placeholder="Enter a message" value="POST request test">
+                <button onclick="testEchoPost()">Send POST</button>
+            </div>
+            <div id="echo-post-output"></div>
+        </section>
+
+        <section class="card">
+            <h2>User Management API</h2>
+            
+            <div class="api-section">
+                <h3>Get All Users</h3>
+                <button onclick="getUsers()">Fetch Users</button>
+                <div id="users-output"></div>
+            </div>
+
+            <div class="api-section">
+                <h3>Create New User</h3>
+                <div class="input-group">
+                    <input type="text" id="user-name" placeholder="Name">
+                    <input type="email" id="user-email" placeholder="Email">
+                    <button onclick="createUser()">Create User</button>
+                </div>
+                <div id="create-user-output"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Load Test</h2>
+            <p>Test the server's ability to handle concurrent requests</p>
+            <div class="input-group">
+                <input type="number" id="concurrent-requests" placeholder="Number of requests" value="100" min="1" max="1000">
+                <button onclick="loadTest()">Run Load Test</button>
+            </div>
+            <div id="load-test-output"></div>
+        </section>
+
+        <footer>
+            <h2>Features</h2>
+            <ul>
+                <li>✅ Multi-threaded with ExecutorService (50 threads)</li>
+                <li>✅ Handles 1000+ concurrent connections</li>
+                <li>✅ HTTP GET/POST request parsing</li>
+                <li>✅ Static file serving (HTML/CSS/JS)</li>
+                <li>✅ RESTful API endpoints</li>
+                <li>✅ Request routing</li>
+                <li>✅ MIME type handling</li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
